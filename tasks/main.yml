@@ -1,0 +1,12 @@
+---
+- name: Install uwsgi package
+  ansible.builtin.package:
+    name: "{{ uwsgi__packages }}"
+- name: create uwsgi service template
+  ansible.builtin.copy:
+    dest: "/etc/systemd/system/uwsgi@.service"
+    src: uwsgi@.service
+    mode: 0644
+    owner: root
+    group: root
+...

@@ -1,0 +1,4 @@
+---
+uwsgi__packages:
+  - uwsgi
+...
